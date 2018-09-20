@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17/09/2018 09:02:41 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="co.model.pojos.TblNoticia" table="tbl_noticia" catalog="DBWeb" optimistic-lock="version">
+        <id name="idnoticia" type="int">
+            <column name="idnoticia" />
+            <generator class="assigned" />
+        </id>
+        <property name="titulo" type="string">
+            <column name="titulo" length="100" not-null="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="65535" not-null="true" />
+        </property>
+        <property name="url" type="string">
+            <column name="url" length="200" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

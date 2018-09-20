@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://webservices.services.co/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservices.services.co/">
+
+<xs:element name="BuscarUsuario" type="tns:BuscarUsuario" />
+
+<xs:element name="BuscarUsuarioResponse" type="tns:BuscarUsuarioResponse" />
+
+<xs:element name="ConsultarUsuario" type="tns:ConsultarUsuario" />
+
+<xs:element name="ConsultarUsuarioResponse" type="tns:ConsultarUsuarioResponse" />
+
+<xs:element name="EliminarUsuario" type="tns:EliminarUsuario" />
+
+<xs:element name="EliminarUsuarioResponse" type="tns:EliminarUsuarioResponse" />
+
+<xs:element name="IngresarUsuario" type="tns:IngresarUsuario" />
+
+<xs:element name="IngresarUsuarioResponse" type="tns:IngresarUsuarioResponse" />
+
+<xs:complexType name="BuscarUsuario">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BuscarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="IngresarUsuario">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="IngresarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarUsuario">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EliminarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ConsultarUsuario">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="ConsultarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tblUsuario" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tblUsuario">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
